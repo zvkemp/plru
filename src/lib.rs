@@ -79,13 +79,10 @@
 //! ✔ Production-quality
 
 #![cfg_attr(features = "no_std", no_std)]
-#![feature(integer_atomics)]
 #![warn(missing_docs)]
 
-extern crate core;
-
-use core::fmt;
-use core::sync::atomic::{self, AtomicU64, AtomicU8};
+use std::fmt;
+use std::sync::atomic::{self, AtomicU64, AtomicU8};
 
 /// The atomic ordering we use throughout the code.
 const ORDERING: atomic::Ordering = atomic::Ordering::Relaxed;
